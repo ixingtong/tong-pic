@@ -1,0 +1,48 @@
+{
+  "name": "tong-pic",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "packageManager": "pnpm@7.30.0",
+  "license": "MIT",
+  "author": {
+    "name": "ntnyq",
+    "email": "ntnyq13@gmail.com"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "build:netlify": "OUTPUT=netlify astro build",
+    "build:vercel": "OUTPUT=vercel astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@nanostores/solid": "^0.3.2",
+    "astro": "^2.0.18",
+    "dayjs": "^1.11.7",
+    "nanostores": "^0.7.4",
+    "solid-js": "^1.6.15",
+    "solidjs-use": "^1.2.0"
+  },
+  "devDependencies": {
+    "@astrojs/netlify": "^2.2.0",
+    "@astrojs/node": "^5.1.0",
+    "@astrojs/solid-js": "^2.1.0",
+    "@astrojs/vercel": "^3.2.1",
+    "@iconify/json": "^2.2.36",
+    "@ntnyq/prettier-config": "^1.6.0",
+    "@unocss/reset": "^0.50.6",
+    "husky": "^8.0.3",
+    "nano-staged": "^0.8.0",
+    "prettier": "^2.8.4",
+    "tsx": "^3.12.5",
+    "typescript": "^5.0.2",
+    "unocss": "^0.50.6"
+  },
+  "prettier": "@ntnyq/prettier-config",
+  "nano-staged": {
+    "*": "prettier -wu"
+  }
+}

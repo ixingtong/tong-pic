@@ -1,0 +1,67 @@
+---
+import Layout from '../layouts/Layout.astro';
+import NavButton from '../components/NavButton'
+import DatePicker from '../components/DatePicker'
+import SelectedDate from '../components/SelectedDate'
+import FavoriteToggle from '../components/FavoriteToggle'
+---
+
+<Layout title="Hello world">
+  <div class="flex flex-col h-screen justify-center items-center gap-4">
+    <SelectedDate client:load />
+    <nav class="flex gap-8 text-lg">
+      <NavButton
+        href="/"
+        isDisabled={false}
+        title=""
+        :client:load
+      >
+        <div class="i-octicon-chevron-left-16" />
+      </NavButton>
+      <DatePicker client:load />
+      <NavButton
+        href="/"
+        isDisabled={false}
+        title=""
+        :client:load
+      >
+        <div class="i-octicon-chevron-right-16" />
+      </NavButton>
+    </nav>
+    <footer class="flex gap-12 items-center text-2xl">
+      <a
+        href="https://github.com/ntnyq"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="Link for GitHub"
+        class="p-2 rounded-md hover:bg-gray-700 hover:text-white"
+      >
+        <div class="i-octicon-mark-github-16"></div>
+      </a>
+      <a
+        href="https://twitter.com/ntnyq"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="Link for Twitter"
+        class="p-2 rounded-md hover:bg-[#00ACEE] hover:text-white"
+      >
+        <div class="i-simple-icons-twitter"></div>
+      </a>
+      <a
+        href="/random"
+        title="Random (Shortcut: R)"
+        class="p-2 rounded-md hover:bg-[#000100] hover:text-white"
+      >
+        <div class="i-bi-dice-3"></div>
+      </a>
+      <a
+        href="/favorites"
+        title="Favorites"
+        class="p-2 rounded-md hover:bg-[#fb7299] hover:text-white"
+      >
+        <div class="i-octicon-star-16"></div>
+      </a>
+      <FavoriteToggle client:load />
+    </footer>
+  </div>
+</Layout>
