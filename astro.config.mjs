@@ -1,10 +1,12 @@
-import { defineConfig } from 'astro/config'
-import unocss from 'unocss/astro'
-import solidJs from '@astrojs/solid-js'
+// @ts-check
 
+import process from 'node:process'
+import netlify from '@astrojs/netlify'
 import node from '@astrojs/node'
-import vercel from '@astrojs/vercel/edge'
-import netlify from '@astrojs/netlify/edge-functions'
+import SolidJS from '@astrojs/solid-js'
+import vercel from '@astrojs/vercel'
+import { defineConfig } from 'astro/config'
+import UnoCSS from 'unocss/astro'
 
 const envAdapter = () => {
   if (process.env.OUTPUT === 'vercel') {
@@ -18,15 +20,18 @@ const envAdapter = () => {
   }
 }
 
-// https://astro.build/config
 export default defineConfig({
-  // site: '',
+  adapter: envAdapter(),
 
-  integrations: [unocss(), solidJs()],
+  integrations: [UnoCSS(), SolidJS()],
 
   output: 'server',
 
-  adapter: envAdapter(),
+  devToolbar: {
+    enabled: false,
+  },
+
+  // site: 'https://tong-pic.vercel.app',
 
   vite: {
     plugins: [],

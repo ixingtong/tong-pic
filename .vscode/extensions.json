@@ -1,4 +1,13 @@
 {
-  "recommendations": ["astro-build.astro-vscode"],
+  "recommendations": [
+    "astro-build.astro-vscode",
+    "streetsidesoftware.code-spell-checker",
+    "mikestead.dotenv",
+    "editorconfig.editorconfig",
+    "dbaeumer.vscode-eslint",
+    "tamasfe.even-better-toml",
+    "esbenp.prettier-vscode",
+    "antfu.unocss"
+  ],
   "unwantedRecommendations": []
 }

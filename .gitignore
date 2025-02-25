@@ -4,5 +4,8 @@ node_modules
 *.local
 dist
 
+.netlify
+.vercel
+
 # generated types
 .astro/

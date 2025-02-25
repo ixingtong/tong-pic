@@ -1,10 +1,10 @@
-import type { ChildrenReturn } from 'solid-js'
+import type { JSX } from 'solid-js'
 
 export interface Props {
   href: string
   title?: string
   isDisabled: boolean
-  children: ChildrenReturn
+  children: JSX.Element[]
 }
 
 export default ({ isDisabled, title, href, children }: Props) => {
@@ -12,7 +12,7 @@ export default ({ isDisabled, title, href, children }: Props) => {
     <button
       disabled
       type='button'
-      class='p-4 rounded-lg bg-gray-300 opacity-50'
+      class='rounded-lg bg-gray-300 p-4 opacity-50'
       title={title}
     >
       {children}
@@ -20,7 +20,7 @@ export default ({ isDisabled, title, href, children }: Props) => {
   ) : (
     <a
       href={href}
-      class='p-4 rounded-lg hover:bg-gray-300 @dark:hover:bg-gray-600'
+      class='rounded-lg p-4 hover:bg-gray-300 @dark:hover:bg-gray-600'
       title={title}
     >
       {children}

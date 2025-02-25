@@ -1,3 +1,39 @@
 {
-  "cSpell.words": ["astrojs", "iconify", "kidonng", "pnpm", "solidjs", "tsconfigs"]
+  "eslint.enable": true,
+  "prettier.enable": true,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.configPath": "./prettier.config.mjs",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "never",
+    "source.sortImports": "never"
+  },
+  "eslint.validate": [
+    "vue",
+    "xml",
+    "yaml",
+    "toml",
+    "json",
+    "jsonc",
+    "json5",
+    "astro",
+    "markdown",
+    "javascript",
+    "typescript",
+    "javascriptreact",
+    "typescriptreact"
+  ],
+  "cSpell.useGitignore": true,
+  "cSpell.allowCompoundWords": true,
+  "cSpell.words": [
+    "astrojs",
+    "gtag",
+    "iconify",
+    "kidonng",
+    "pnpm",
+    "solidjs",
+    "tsconfigs",
+    "vercel"
+  ]
 }

@@ -1,6 +1,6 @@
-import type { JSX } from 'solid-js'
 import { useStore } from '@nanostores/solid'
 import { currentDate, setCurrentDate } from '../stores/date'
+import type { JSX } from 'solid-js'
 
 export default () => {
   const $currentDate = useStore(currentDate)
@@ -12,7 +12,7 @@ export default () => {
   return (
     <input
       type='date'
-      class='px-6 rounded-lg border'
+      class='border rounded-lg px-6'
       value={$currentDate()}
       onChange={handleDateChange}
     />
